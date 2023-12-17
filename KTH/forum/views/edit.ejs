@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 수정하기</title>
+  <link href="/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="grey-bg">
+
+  <%- include('nav.ejs') %>
+    <p>
+    <h3>글번호 : <%= result._id %>
+    </h3>
+    </p>
+    <form class="form-box" action="/update?_method=PUT" method="POST">
+      <h4>수정하기</h4>
+      <input style="display: none;" name="id" value="<%= result._id %>">
+      <input name="title" value="<%= result.title %>">
+      <input name="content" value="<%= result.content %>">
+      <button type="submit">전송</button>
+    </form>
+
+
+</body>
+
+</html>

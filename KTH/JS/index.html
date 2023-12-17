@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./main.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="alert-box" id="alert">
+    <p id="text">알림창임</p>
+    <button id="close">닫기</button>
+
+  </div>
+  <button onclick="alertDisplay('block', '아이디입력하세요')"> 버튼1</button>
+  <button onclick="alertDisplay('block', '비번입력하세요')"> 버튼2</button>
+
+  <script>
+    function alertDisplay(hole, text) {
+      document.getElementById('alert').style.display = hole;
+      document.getElementById('text').innerText = text;
+    }
+
+    document.getElementById('close').addEventListener('click', function () {
+      document.getElementById('alert').style.display = 'none'
+    });
+
+  </script>
+
+</body>
+
+</html>
+<!-- ~~ of null 에러 : 셀렉터 오타 -->
+<!-- 클릭, 키입력, 스크롤, 드래그 등등 다 => event
+     이벤트리스너 => 감시자 역할
+-->
+<!-- 함수 파라미터 자리에 들어가는 함수 => 콜백함수 -->
